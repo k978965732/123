@@ -2,11 +2,19 @@
   <div class="page-wrap">
     <div class="book-list-wrapper">
       <div class="book-card-wrap">
-        <div
-          class="book-card"
-          v-for="(item, index) in book_list"
-          :key="index"
-        ></div>
+        <div class="book-card" v-for="(item, index) in book_list" :key="index">
+          <div class="image-wrap">
+            <div
+              class="bgi"
+              :style="{ 'background-image': 'url(' + item.image + ')' }"
+            ></div>
+          </div>
+          <div class="title-wrap">
+            <div class="text">
+              {{ item.name }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
