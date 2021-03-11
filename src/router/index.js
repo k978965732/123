@@ -10,6 +10,11 @@ const routes = [
     path: "/books",
     name: "Books",
     component: Books
+  },
+  {
+    path: "/books/:id",
+    name: "BookDetail",
+    component: Books
   }
 ];
 

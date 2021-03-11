@@ -1,5 +1,14 @@
 $bezier = cubic-bezier(0.68, 0, 0.265, 1);
 
+transition(time)
+    transition all time $bezier
+
+displayFlex(justify-content = flex-start, align-items = flex-start, flex-direction = row)
+    display flex
+    flex-direction flex-direction 
+    align-items align-items
+    justify-content justify-content
+
 #bk-scoped
     *
         box-sizing border-box
@@ -10,6 +19,8 @@ $bezier = cubic-bezier(0.68, 0, 0.265, 1);
 
         .page-wrap
             padding 20px
+            max-width 940px
+            margin 0 auto
             @media screen and (max-width 767px)
                 padding 10px
 
@@ -17,8 +28,7 @@ $bezier = cubic-bezier(0.68, 0, 0.265, 1);
                 box-shadow 2px 2px 2px 2px #d8d8d8
                 padding 10px
                 width 100%
-                max-width 900px
-                display flex
+                displayFlex()
                 overflow auto
                 margin 0 auto
 
@@ -42,6 +52,8 @@ $bezier = cubic-bezier(0.68, 0, 0.265, 1);
                         border-radius 6px
                         padding 20px
                         height 100%
+                        cursor pointer
+                        display block
 
                         @media screen and (max-width 767px)
                             padding 10px
@@ -73,3 +85,90 @@ $bezier = cubic-bezier(0.68, 0, 0.265, 1);
                         .image-wrap
                             .bg-image
                                 transform scale(1.1)
+
+            .book-detail-wrapper
+                padding 20px 0
+
+                .details-box
+                    box-shadow 2px 2px 2px 2px #d8d8d8
+                    padding 10px
+
+                    .book-name
+                        font-size 24px
+                        padding 10px 0
+
+                    .flex-wrap
+                        displayFlex(flex-start, flex-end)
+
+                        @media screen and (max-width 767px)
+                            flex-wrap wrap
+
+                        .wrap
+                            @media screen and (max-width 767px)
+                                width 100%
+
+                            &.left-wrap
+                                flex-grow 1
+
+                                .input-wrapper
+                                    displayFlex(flex-start, center)
+                                    padding 10px 0
+
+                                    .title
+                                        font-size 24px
+
+                                    .input-wrap
+                                        displayFlex(flex-start, center)
+                                        padding-left 20px
+
+                                        .input
+                                            padding 0 10px
+
+                                            input 
+                                                border 2px solid #333
+                                                line-height 40px
+                                                border-radius 6px
+                                                padding 0 10px
+                                                font-size 20px
+                                                max-width 150px
+                                                text-align center 
+
+                                        .button-wrap
+                                            button 
+                                                font-size 24px
+                                                background-color transparent
+                                                cursor pointer
+                                                border 2px solid #333333
+                                                border-radius 6px
+                                                padding 0
+                                                margin 0
+                                                width 40px
+                                                text-align center 
+                                                line-height 40px
+                                                transition(0.2s)
+
+                                                &:hover
+                                                    background-color #32B105
+                                                    color #FFFFFF
+
+                            &.right-wrap
+                                .confirm-wrap
+                                    padding-top 20px
+
+                                    button  
+                                        font-size 24px
+                                        background-color transparent
+                                        border-radius 6px
+                                        padding 5px 20px
+                                        cursor pointer
+                                        color #000000
+                                        transition(0.2s)
+
+                                        @media screen and (max-width 767px)
+                                            width 100%
+
+                                        &:hover
+                                            background-color #32B105
+                                            color #FFFFFF
+
+
